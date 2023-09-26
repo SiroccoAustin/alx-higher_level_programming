@@ -39,10 +39,12 @@ class Square:
 
     @property
     def position(self):
+        """position getter"""
         return self.__position
     
     @position.setter
     def position(self, value):
+        """position setter"""
         if not (isinstance(value, tuple) and
                 len(value) == 2 and
                 all(isinstance(x, int) and x >= 0 for x in value)):
