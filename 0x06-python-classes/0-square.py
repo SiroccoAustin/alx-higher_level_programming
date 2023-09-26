@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
 class Square:
-    pass
+    """The square class is empty at the moment"""
