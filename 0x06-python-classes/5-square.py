@@ -36,4 +36,7 @@ class Square:
         """print # in range of size"""
         if self.__size == 0:
             print()
-        print("#" * self.__size)
+        else:
+            hash = "#" * self.__size
+            for i in range(self.__size):
+                print(hash)
