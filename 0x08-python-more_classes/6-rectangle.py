@@ -46,8 +46,8 @@ class Rectangle:
     def __del__(self):
         """Delete an instance"""
         print("Bye rectangle...")
-        if self.__class__.instance_count != 0:
-            self.__class__.instance_count -= 1
+        if Rectangle.instance_count != 0:
+            Rectangle.instance_count -= 1
 
     @property
     def height(self):
