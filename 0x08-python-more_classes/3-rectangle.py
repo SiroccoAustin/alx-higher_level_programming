@@ -28,9 +28,11 @@ class Rectangle:
         """print rectangle"""
         string = ""
         if (self.__height == 0 or self.__width == 0):
-            return ""
+            return string
         for i in range(self.__height):
-            string += '#' * self.__width + '\n'
+            string += '#' * self.__width
+            if i < self.__height:
+                string += '\n'
         return string
 
     @property

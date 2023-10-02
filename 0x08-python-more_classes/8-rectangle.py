@@ -32,9 +32,11 @@ class Rectangle:
         """print rectangle"""
         string = ""
         if (self.__height == 0 or self.__width == 0):
-            return ""
+            return string
         for i in range(self.__height):
-            string += str(self.print_symbol) * self.__width + '\n'
+            string += str(self.print_symbol) * self.__width
+            if i < self.__height:
+                string += '\n'
         return string
     
     def __repr__(self):
