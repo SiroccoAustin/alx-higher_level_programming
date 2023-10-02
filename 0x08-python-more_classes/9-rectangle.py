@@ -34,7 +34,7 @@ class Rectangle:
             return string
         for i in range(self.__height):
             string += str(self.print_symbol) * self.__width
-            if i < self.__height:
+            if i < self.__height - 1:
                 string += '\n'
         return string
     
