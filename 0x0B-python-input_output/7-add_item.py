@@ -7,7 +7,7 @@ loadjson = __import__("8-load_from_json_file").load_from_json_file
 
 try:
     Array = loadjson("add_item.json")
-except FileExistsError:
+except FileNotFoundError:
     Array = []
 arguments = sys.argv[1:]
 
