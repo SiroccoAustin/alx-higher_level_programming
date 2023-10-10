@@ -9,8 +9,7 @@ try:
     Array = loadjson("add_item.json")
 except FileNotFoundError:
     Array = []
-arguments = sys.argv[1:]
 
-for argument in arguments:
+for argument in sys.argv[1:]:
     Array.append(argument)
 savejson(Array, "add_item.json")
