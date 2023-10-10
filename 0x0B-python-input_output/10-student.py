@@ -11,9 +11,12 @@ class Student:
     
     def to_json(self, attrs=None):
         """convert to dict"""
+        fill = 0
         if type(attrs) is list:
+            fill = 1
             for elem in attrs:
                 if type(elem) is not str:
+                    fill = 0
                     break
         dict_return = {}
         convert_to_dict = self.__dict__
