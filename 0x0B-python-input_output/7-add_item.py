@@ -10,7 +10,5 @@ try:
 except FileNotFoundError:
     Array = []
 arguments = sys.argv[1:]
-
-for argument in arguments:
-    Array.append(argument)
+Array.extend(arguments)
 savejson(Array, "add_item.json")
