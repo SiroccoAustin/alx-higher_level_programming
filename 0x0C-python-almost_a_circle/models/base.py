@@ -49,7 +49,7 @@ class Base:
             new_cls = Square(4, 4, 0, 0, 0)
             new_cls.update(**dictionary)
             return new_cls
-
+    @classmethod
     def load_from_file(cls):
         from rectangle import Rectangle
         from square import Square
