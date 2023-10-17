@@ -20,7 +20,9 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
     def to_json_string(list_dictionaries):
+        """JSON encoding"""
         if list_dictionaries is None:
             return []
         else:
@@ -28,6 +30,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Write json to file"""
         from rectangle import Rectangle
         from square import Square
         list_copy = list_objs.copy()
@@ -41,12 +44,14 @@ class Base:
                 file.write(Base.to_json_string(list_copy))
     
     def from_json_string(json_string):
+        """Json decoding"""
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
     
     @classmethod
     def create(cls, **dictionary):
+        """Create new instances of class"""
         from rectangle import Rectangle
         from square import Square
         if cls is Rectangle:
@@ -59,6 +64,7 @@ class Base:
             return new_cls
     @classmethod
     def load_from_file(cls):
+        """Create instances"""
         from rectangle import Rectangle
         from square import Square
 
