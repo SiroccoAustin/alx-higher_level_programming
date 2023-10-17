@@ -1,15 +1,20 @@
 #!/usr/bin/python3
 import json
 
-"""defining Base class"""
+"""Base module for managing IDs in the project."""
 
 class Base:
-    """Base model"""
+    """Base class for managing IDs in other classes."""
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialize a new Base"""
+        """
+        Initialize a new Base instance.
+
+        Args:
+            id (int, optional): The ID to assign to the instance. If not provided, a new ID will be generated.
+        """
         if id is not None:
             self.id = id
         else:
