@@ -2,8 +2,12 @@
 """Defines a rectangle class."""
 from base import Base
 
+
+
 class Rectangle(Base):
     """Class for drawing a Rectangle"""
+
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Initialize a new Rectangle instance.
