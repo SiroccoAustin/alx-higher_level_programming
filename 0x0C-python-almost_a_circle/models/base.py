@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""Base module for managing IDs in the project."""
 import json
 
-"""Base module for managing IDs in the project."""
 
 class Base:
     """Base class for managing IDs in other classes."""
