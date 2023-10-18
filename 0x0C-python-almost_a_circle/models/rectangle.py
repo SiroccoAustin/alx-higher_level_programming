@@ -6,7 +6,6 @@ from .base import Base
 class Rectangle(Base):
     """Represent a rectangle."""
 
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize a new Rectangle.
 
@@ -22,8 +21,8 @@ class Rectangle(Base):
             TypeError: If either of x or y is not an int.
             ValueError: If either of x or y < 0.
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
