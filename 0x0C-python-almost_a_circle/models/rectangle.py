@@ -32,45 +32,45 @@ class Rectangle(Base):
         """Set/get the width of the Rectangle."""
         return self.__width
     @width.setter
-    def width(self, width):
-        if type(width) is not int:
+    def width(self, value):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
-        if width < 1:
+        if value < 1:
             raise ValueError("width must be > 0")
-        self.__width = width
+        self.__width = value
 
     @property
     def height(self):
         """Set/get the height of the Rectangle."""
         return self.__height
     @height.setter
-    def height(self, height):
-        if type(height) is not int:
+    def height(self, value):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
-        if height < 1:
+        if value < 1:
             raise ValueError("width must be > 0")
-        self.height = height
+        self.height = value
     @property
     def x(self):
         """Set/get the x coordinates of the Rectangle."""
         return self.__x
     @x.setter
-    def x(self, x):
-        if type(x) is not int:
+    def x(self, value):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
-        if x < 1:
+        if value < 1:
             raise ValueError("width must be > 0")
-        self.__x = x
+        self.__x = value
     @property
     def y(self):
         """Set/get the y coordinates of the Rectangle."""
         return self.__y
     @y.setter
-    def y(self, y):
-        if type(y) is not int:
+    def y(self, value):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
-        if y < 1:
+        if value < 1:
             raise ValueError("width must be > 0")
-        self.__y = y
+        self.__y = value
 
     
