@@ -47,3 +47,16 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
+
+    def create(cls, **dictionary):
+        """Create a new instance of class"""
+        from .rectangle import Rectangle
+        from .square import Square
+        if cls is Rectangle:
+            new_instance = Rectangle(2, 3, 2, 2)
+            new_instance.update(**dictionary)
+            return new_instance
+        elif cls is Square:
+            new_square = Square(3, 3, 0, 0)
+            new_square.update(**dictionary)
+            return new_square
