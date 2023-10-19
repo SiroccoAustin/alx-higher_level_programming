@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Defines a rectangle class."""
-from base import Base
+from .base import Base
 
 
 class Rectangle(Base):
@@ -94,8 +94,6 @@ class Rectangle(Base):
             print()
         for _ in range(self.height):
             print(" " * self.x + string)
-
-        
 
     def __str__(self):
         """Returns a string to print"""
