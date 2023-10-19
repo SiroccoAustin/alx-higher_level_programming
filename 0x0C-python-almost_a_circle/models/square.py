@@ -36,3 +36,8 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns a dictionary of the Rectangle instance's attributes"""
+        new_dict = {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
+        return new_dict
