@@ -20,6 +20,9 @@ class Square(Rectangle):
         self.height = size
 
     def update(self, *args, **kwargs):
+        """Updates Rectangle attributes. In the following order if positional:
+        id, width, height, x, y
+        """
         if len(args) > 0:
             self.id = args[0]
         if len(args) > 1:
