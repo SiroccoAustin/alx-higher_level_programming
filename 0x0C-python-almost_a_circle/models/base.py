@@ -26,3 +26,18 @@ class Base:
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Saves the list of objects to a file"""
+        from .rectangle import Rectangle
+        from .square import Square
+        list_copy = list_objs.copy()
+        for i in range(len(list_copy)):
+            list_copy[i] = list_copy[i].to_dictionary()
+        if cls is Rectangle:
+            with open("Rectangle.json", "w") as file:
+                file.write(Base.to_json_string(list_copy))
+        if cls is Square:
+            with open("Square.json", "w") as file:
+                file.write(Base.to_json_string(list_copy))
