@@ -99,7 +99,7 @@ class Rectangle(Base):
         """Returns a string to print"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates the arguments"""
         if len(args) > 0:
             self.id = args[0]
@@ -111,3 +111,7 @@ class Rectangle(Base):
             self.x = args[3]
         if len(args) > 4:
             self.y = args[4]
+        if len(args) == 0:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
