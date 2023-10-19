@@ -48,6 +48,7 @@ class Base:
             return []
         return json.loads(json_string)
 
+    @classmethod
     def create(cls, **dictionary):
         """Create a new instance of class"""
         from .rectangle import Rectangle
