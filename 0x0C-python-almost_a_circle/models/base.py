@@ -54,10 +54,10 @@ class Base:
         from .rectangle import Rectangle
         from .square import Square
         if cls is Rectangle:
-            new_instance = Rectangle(2, 3, 2, 2)
+            new_instance = Rectangle(1, 1, 0, 0, 0)
             new_instance.update(**dictionary)
             return new_instance
         elif cls is Square:
-            new_square = Square(3, 3, 0, 0)
+            new_square = Square(3, 0, 0, 0)
             new_square.update(**dictionary)
             return new_square
