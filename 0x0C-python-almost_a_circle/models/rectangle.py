@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Defines a rectangle class."""
-from .base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -90,10 +90,13 @@ class Rectangle(Base):
     def display(self):
         """Display Rectangle in the screen"""
         string = "#"
-        for i in range(self.height):
-            for x in range(self.width):
-                print(string, end="")
+        for i in range(self.y):
             print()
+        for x in range(self.height):
+            print(" " * self.x, end="")
+            print(string * self.y)
+        
 
     def __str__(self):
+        """Returns a string to print"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
