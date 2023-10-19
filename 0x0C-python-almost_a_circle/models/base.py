@@ -38,6 +38,6 @@ class Base:
         if cls is Rectangle:
             with open("Rectangle.json", "w") as file:
                 file.write(Base.to_json_string(list_copy))
-        if cls is Square:
+        elif cls is Square:
             with open("Square.json", "w") as file:
                 file.write(Base.to_json_string(list_copy))
