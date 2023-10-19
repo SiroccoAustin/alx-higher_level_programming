@@ -89,12 +89,12 @@ class Rectangle(Base):
     
     def display(self):
         """Display Rectangle in the screen"""
-        string = "#"
-        for i in range(self.y):
+        string = "#" * self.width
+        for _ in range(self.y):
             print()
-        for x in range(self.height):
-            print(" " * self.x, end="")
-            print(string * self.y)
+        for _ in range(self.height):
+            print(" " * self.x + string)
+
         
 
     def __str__(self):
