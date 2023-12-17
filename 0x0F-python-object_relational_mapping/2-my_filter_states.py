@@ -12,7 +12,7 @@ if __name__ == "__main__":
     conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
     my_spot = sys.argv[4]
     c = conn.cursor()
-    c.execute("SELECT * FROM states WHERE name = %s", (my_spot,))
+    c.execute("SELECT * FROM states WHERE name = '{}'".format(my_spot))
     rows = c.fetchall()
     for eachRow in rows:
         print(eachRow)
