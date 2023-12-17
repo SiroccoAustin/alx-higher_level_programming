@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""SQL Injection"""
+
 import MySQLdb
 import sys
 
