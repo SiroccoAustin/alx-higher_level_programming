@@ -15,7 +15,7 @@ class State(Base):
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(String(128), nullable=False)
 
-    def repr(self):
+    def __repr__(self):
         return f"{self.id}: {self.name}"
 
 if __name__ == "__main__":
@@ -24,5 +24,5 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     inst = session.query(State).order_by(State.id)
-    for state in data:
+    for state in inst:
         print(state)
