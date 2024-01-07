@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """fetches the url"""
-import urllib.request
-
 if __main__ == "__name__":
+    import urllib.request
 
     with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
         html = response.read()
