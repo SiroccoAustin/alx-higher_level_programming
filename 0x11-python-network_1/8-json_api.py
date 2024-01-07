@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""post"""
+"""post request"""
 import sys
 import requests
 
